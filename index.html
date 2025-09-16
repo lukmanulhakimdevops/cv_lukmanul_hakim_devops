@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive CV | Lukmanul Hakim - Subject Matter Expert (DevSecOps)</title>
+    <title>Interactive CV | Lukmanul Hakim - Subject Matter of DevSecOps Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
@@ -107,7 +107,7 @@
         <!-- Header Section -->
         <header class="text-center py-12">
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-800 tracking-tight">LUKMANUL HAKIM</h1>
-            <p class="mt-4 text-xl sm:text-2xl text-gray-600">Strategic Technology Leader | CTO Profile</p>
+            <p class="mt-4 text-xl sm:text-2xl text-gray-600">Strategic Technology Leader | Subject Matter Expert of DevSecOps</p>
             <div class="mt-6 flex justify-center items-center space-x-6 text-sm text-gray-500">
                 <a href="https://www.linkedin.com/in/lukmanulhakimdevops/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-700 transition">LinkedIn Profile</a>
                 <span>&bull;</span>
@@ -439,10 +439,10 @@
 
             const credentials = {
                 certifications: [
-                    "Google Cloud Certified Associate Cloud Engineer",
-                    "AWS Certified Cloud Practitioner",
-                    "DevNet Associate (Cisco)",
-                    "CyberOps Associate (Cisco)"
+                    { name: "Google Cloud Certified Associate Cloud Engineer", id: "55864fb403294d648d9d2130326a0842" },
+                    { name: "AWS Certified Cloud Practitioner", id: "YT3X1MX1VFBE1K5V" },
+                    { name: "DevNet Associate (Cisco)", id: "1987298840-45/PROA/BLSDM.Kominfo/2024" },
+                    { name: "CyberOps Associate (Cisco)", id: "0447256131-103/OA.DTS/BLSDM.KOMINFO/2020" }
                 ],
                 education: [
                     { degree: "Bachelor of Economics", school: "Mercu Buana University" },
@@ -598,7 +598,7 @@
             const certificationsList = document.getElementById('certifications-list');
             credentials.certifications.forEach(cert => {
                 const li = document.createElement('li');
-                li.innerHTML = `<span class="text-sky-600">&#10003;</span> ${cert}`;
+                li.innerHTML = `<div><span class="text-sky-600">&#10003;</span> <strong>${cert.name}</strong></div><div class="text-xs text-gray-500 ml-5">Credential ID: ${cert.id}</div>`;
                 certificationsList.appendChild(li);
             });
 
