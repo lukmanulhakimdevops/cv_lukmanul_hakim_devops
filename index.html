@@ -119,8 +119,8 @@
         <section id="summary" class="my-16">
              <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-200">
                 <h2 class="text-2xl font-bold text-center text-sky-800 mb-6">Executive Summary</h2>
-                <p class="text-center text-gray-700 leading-relaxed">
-                    Visionary and results-driven technology executive with over 13 years of experience directing IT infrastructure strategy, digital transformation, and high-performance engineering teams. Proven track record in architecting scalable, secure, and cost-efficient technology ecosystems that align with and drive business objectives. Expertise in technology roadmapping, budget management (CAPEX/OPEX), and fostering a culture of innovation and excellence. Certified in AWS and Google Cloud, with a strong foundation in modern cloud-native technologies and DevSecOps principles.
+                <p class="text-center text-gray-700 leading-relaxed text-justify">
+                    Visionary and results-driven technology executive with a career spanning over 13 years, featuring 9+ years of hands-on and leadership experience in directing IT infrastructure strategy, digital transformation, and high-performance engineering teams. Proven track record in architecting scalable, secure, and cost-efficient technology ecosystems that align with and drive business objectives. Expertise in technology roadmapping, budget management (CAPEX/OPEX), and fostering a culture of innovation and excellence.
                 </p>
             </div>
         </section>
@@ -189,18 +189,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Competency Distribution -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Experience by Core Competencies</h3>
-                    <p class="text-center text-sm text-gray-500 mb-4">Distribution of 13+ years of experience across key leadership domains.</p>
+                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Leadership Competency Profile</h3>
+                    <p class="text-center text-sm text-gray-500 mb-4">Qualitative assessment of key leadership domains.</p>
                     <div class="chart-container h-[450px]">
                         <canvas id="competencyRadarChart"></canvas>
                     </div>
                 </div>
                 <!-- Tech Domain Distribution -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Hands-on Experience by Technical Domain</h3>
-                     <p class="text-center text-sm text-gray-500 mb-4">Total years of experience quantified by technical category.</p>
+                    <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Experience by Functional Domain</h3>
+                     <p class="text-center text-sm text-gray-500 mb-4">Breakdown of work experience by primary job function.</p>
                     <div class="chart-container h-[450px]">
-                        <canvas id="techDomainChart"></canvas>
+                        <canvas id="functionalDomainChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                     <h3 class="text-xl font-semibold text-sky-700 mb-4">Professional Certifications</h3>
-                    <ul id="certifications-list" class="space-y-3 text-gray-700">
+                    <ul id="certifications-list" class="space-y-3 text-gray-700 text-justify">
                         <!-- Certs list -->
                     </ul>
                 </div>
@@ -380,49 +380,32 @@
                 }
             ];
 
+            const allCompetencies = [
+                { name: "Digital Transformation", category: "Technology Strategy" },
+                { name: "Technology Roadmapping", category: "Technology Strategy" },
+                { name: "Enterprise Architecture", category: "Technology Strategy" },
+                { name: "Strategic Management", category: "Technology Strategy" },
+                { name: "Budget Management (CAPEX/OPEX)", category: "Financial Acumen" },
+                { name: "Financial Planning", category: "Financial Acumen" },
+                { name: "Financial Management", category: "Financial Acumen" },
+                { name: "ROI Analysis", category: "Financial Acumen" },
+                { name: "Talent Acquisition", category: "Team Leadership" },
+                { name: "High-Performance Team Building", category: "Team Leadership" },
+                { name: "Mentorship", category: "Team Leadership" },
+                { name: "Stakeholder Management", category: "Executive Functions" },
+                { name: "Risk Management", category: "Executive Functions" },
+                { name: "Project Management", category: "Executive Functions" },
+                { name: "SCM (Supply Chain Management)", category: "Executive Functions" },
+                { name: "Total Quality Management (TQM)", category: "Executive Functions" },
+                { name: "Managerial Decision Making", category: "Executive Functions" },
+            ];
+            
             const competencies = {
-                "All": [
-                    { name: "Digital Transformation", category: "Technology Strategy" },
-                    { name: "Technology Roadmapping", category: "Technology Strategy" },
-                    { name: "Enterprise Architecture", category: "Technology Strategy" },
-                    { name: "Strategic Management", category: "Technology Strategy" },
-                    { name: "Budget Management (CAPEX/OPEX)", category: "Financial Acumen" },
-                    { name: "Financial Planning", category: "Financial Acumen" },
-                    { name: "Financial Management", category: "Financial Acumen" },
-                    { name: "ROI Analysis", category: "Financial Acumen" },
-                    { name: "Talent Acquisition", category: "Team Leadership" },
-                    { name: "High-Performance Team Building", category: "Team Leadership" },
-                    { name: "Mentorship", category: "Team Leadership" },
-                    { name: "Stakeholder Management", category: "Executive Functions" },
-                    { name: "Risk Management", category: "Executive Functions" },
-                    { name: "Project Management", category: "Executive Functions" },
-                    { name: "SCM (Supply Chain Management)", category: "Executive Functions" },
-                    { name: "Total Quality Management (TQM)", category: "Executive Functions" },
-                    { name: "Managerial Decision Making", category: "Executive Functions" },
-                ],
-                "Leadership": [
-                    { name: "Talent Acquisition", category: "Team Leadership" },
-                    { name: "High-Performance Team Building", category: "Team Leadership" },
-                    { name: "Mentorship", category: "Team Leadership" },
-                    { name: "Stakeholder Management", category: "Executive Functions" },
-                    { name: "Project Management", category: "Executive Functions" },
-                    { name: "Managerial Decision Making", category: "Executive Functions" },
-                ],
-                "Strategy": [
-                    { name: "Digital Transformation", category: "Technology Strategy" },
-                    { name: "Technology Roadmapping", category: "Technology Strategy" },
-                    { name: "Enterprise Architecture", category: "Technology Strategy" },
-                    { name: "Strategic Management", category: "Technology Strategy" },
-                    { name: "Risk Management", category: "Executive Functions" },
-                    { name: "SCM (Supply Chain Management)", category: "Executive Functions" },
-                    { name: "Total Quality Management (TQM)", category: "Executive Functions" },
-                ],
-                "Financial": [
-                    { name: "Budget Management (CAPEX/OPEX)", category: "Financial Acumen" },
-                    { name: "Financial Planning", category: "Financial Acumen" },
-                    { name: "Financial Management", category: "Financial Acumen" },
-                    { name: "ROI Analysis", category: "Financial Acumen" },
-                ]
+                "All": allCompetencies,
+                "Team Leadership": allCompetencies.filter(c => c.category === "Team Leadership"),
+                "Technology Strategy": allCompetencies.filter(c => c.category === "Technology Strategy"),
+                "Financial Acumen": allCompetencies.filter(c => c.category === "Financial Acumen"),
+                "Executive Functions": allCompetencies.filter(c => c.category === "Executive Functions")
             };
             
             const technicalSkills = [
@@ -456,6 +439,7 @@
             const competencyGridContainer = document.getElementById('competency-grid');
             const competencyFiltersContainer = document.getElementById('competency-filters');
             const techSkillsGrid = document.getElementById('tech-skills-grid');
+            let currentCompetencyFilter = 'All';
             
             function highlightAllSkills(keys = []) {
                 const competencyCards = document.querySelectorAll('.competency-card');
@@ -513,7 +497,7 @@
                     }
                 });
 
-                displayCompetencies('All');
+                displayCompetencies(currentCompetencyFilter);
                 const competenciesToHighlight = [...(experience.keyCompetencies || []), ...(experience.techSkills || [])];
                 highlightAllSkills(competenciesToHighlight);
             }
@@ -572,13 +556,15 @@
                     }
                 });
             }
-
-            Object.keys(competencies).forEach(filter => {
+            
+            const competencyFilterButtons = ['All', 'Team Leadership', 'Technology Strategy', 'Financial Acumen', 'Executive Functions'];
+            competencyFilterButtons.forEach(filter => {
                 const button = document.createElement('button');
                 button.className = 'px-4 py-2 text-sm font-medium rounded-full transition bg-gray-200 text-gray-700 hover:bg-sky-600 hover:text-white';
                 button.textContent = filter;
                 button.dataset.filter = filter;
                 button.addEventListener('click', () => {
+                    currentCompetencyFilter = filter;
                     displayCompetencies(filter);
                     highlightAllSkills([]);
                 });
@@ -598,7 +584,7 @@
             const certificationsList = document.getElementById('certifications-list');
             credentials.certifications.forEach(cert => {
                 const li = document.createElement('li');
-                li.innerHTML = `<div><span class="text-sky-600">&#10003;</span> <strong>${cert.name}</strong></div><div class="text-xs text-gray-500 ml-5">Credential ID: ${cert.id}</div>`;
+                li.innerHTML = `<div><span class="text-sky-600">&#10003;</span> <strong>${cert.name}</strong></div><div class="text-xs text-gray-500 ml-5 text-justify">Credential ID: ${cert.id}</div>`;
                 certificationsList.appendChild(li);
             });
 
@@ -666,61 +652,58 @@
                 options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, pointLabels: { font: { size: 12 } } } }, plugins: { legend: { display: false } } }
             });
 
-            const competencyRadarCtx = document.getElementById('competencyRadarChart').getContext('2d');
-            new Chart(competencyRadarCtx, {
-                type: 'radar',
-                data: {
-                    labels: ['Leadership', 'Strategy', 'Coaching', 'Technical'],
-                    datasets: [{
-                        label: 'Years of Focused Experience',
-                        data: [10.5, 9.5, 5.3, 5.75],
-                        fill: true,
-                        backgroundColor: 'rgba(14, 165, 233, 0.2)',
-                        borderColor: 'rgb(14, 165, 233)',
-                        pointBackgroundColor: 'rgb(14, 165, 233)',
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: 'rgb(14, 165, 233)'
-                    }]
-                },
-                options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, pointLabels: { font: { size: 14 } } } }, plugins: { legend: { position: 'top' } } }
-            });
+            const competencyRadarCtx = document.getElementById('competencyRadarChart');
+            if (competencyRadarCtx) {
+                 new Chart(competencyRadarCtx.getContext('2d'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Team Leadership', 'Technology Strategy', 'Financial Acumen', 'Executive Functions'],
+                        datasets: [{
+                            label: 'Years of Focused Experience',
+                            data: [1.92, 2.33, 1.92, 9.25],
+                            fill: true,
+                            backgroundColor: 'rgba(14, 165, 233, 0.2)',
+                            borderColor: 'rgb(14, 165, 233)',
+                            pointBackgroundColor: 'rgb(14, 165, 233)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgb(14, 165, 233)'
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, pointLabels: { font: { size: 14 } } } }, plugins: { legend: { position: 'top' } } }
+                });
+            }
 
-            const techDomainCtx = document.getElementById('techDomainChart').getContext('2d');
-            const techDomainData = {
-                labels: ['Cloud Platforms', 'CI/CD & DevOps Tools', 'Container & Orchestration', 'Monitoring & Observability', 'Network Infrastructure', 'IaC & Automation', 'Security (DevSecOps)'],
+
+            const functionalDomainCtx = document.getElementById('functionalDomainChart').getContext('2d');
+            const functionalDomainData = {
+                labels: ['DevOps & Engineering', 'IT Leadership & Strategy', 'IT Consulting & Training', 'Foundation IT'],
                  datasets: [{
                     label: 'Years of Experience',
-                    data: [4.83, 3.83, 3.08, 3.08, 3.25, 2.83, 2.83],
+                    data: [2.16, 1.91, 4.18, 1.25],
                     backgroundColor: [
-                        'rgba(16, 185, 129, 0.7)',
-                        'rgba(59, 130, 246, 0.7)',
-                        'rgba(107, 114, 128, 0.7)',
-                        'rgba(251, 146, 60, 0.7)',
-                        'rgba(139, 92, 246, 0.7)',
-                        'rgba(239, 68, 68, 0.7)',
-                        'rgba(217, 70, 239, 0.7)'
+                        'rgba(3, 105, 161, 0.7)',
+                        'rgba(14, 165, 233, 0.7)',
+                        'rgba(56, 189, 248, 0.7)',
+                        'rgba(125, 211, 252, 0.7)'
                     ],
                      borderColor: [
-                        'rgb(16, 185, 129)',
-                        'rgb(59, 130, 246)',
-                        'rgb(107, 114, 128)',
-                        'rgb(251, 146, 60)',
-                        'rgb(139, 92, 246)',
-                        'rgb(239, 68, 68)',
-                        'rgb(217, 70, 239)'
+                        'rgb(3, 105, 161)',
+                        'rgb(14, 165, 233)',
+                        'rgb(56, 189, 248)',
+                        'rgb(125, 211, 252)'
                     ],
                     borderWidth: 1
                 }]
             };
-             new Chart(techDomainCtx, {
+             new Chart(functionalDomainCtx, {
                 type: 'bar',
-                data: techDomainData,
+                data: functionalDomainData,
                 options: {
                     indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false }, title: { display: true, text: 'Experience by Technology Domain' },
+                    plugins: { legend: { display: false }, title: { display: true, text: 'Experience by Functional Domain' },
                         tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.x.toFixed(2)} years` } }
                     },
                     scales: { x: { beginAtZero: true, title: { display: true, text: 'Total Years' } } }
