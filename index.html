@@ -198,7 +198,7 @@
                 <!-- Tech Domain Distribution -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                     <h3 class="text-xl font-semibold text-center text-sky-700 mb-2">Experience by Functional Domain</h3>
-                     <p class="text-center text-sm text-gray-500 mb-4">Breakdown of work experience by primary job function.</p>
+                     <p class="text-center text-sm text-gray-500 mb-4">Breakdown of work experience by primary job function. Note: Total duration from all related experiences.</p>
                     <div class="chart-container h-[450px]">
                         <canvas id="functionalDomainChart"></canvas>
                     </div>
@@ -261,7 +261,7 @@
                     company: "PT. Altha Dyanusa Consulting",
                     industry: "Consulting",
                     role: "Subject Matter Expert",
-                    period: "Oct 2024 - Feb 2025",
+                    period: "Nov 2024 - Feb 2025",
                     details: ["<strong>Strategic Guidance:</strong> Advise executive leadership on DevOps and cloud adoption strategies to accelerate business agility and market entry.","<strong>Performance Optimization:</strong> Architected and implemented standardized training and documentation frameworks, boosting team productivity by 25%.","<strong>Talent Strategy:</strong> Developed and executed a successful mentorship program that cultivated top engineering talent, achieving a 95% employee retention rate."],
                     keyCompetencies: ["Technology Roadmapping", "Talent Acquisition", "Stakeholder Management", "ROI Analysis"],
                     techSkills: ["AWS", "GCP"]
@@ -271,33 +271,33 @@
                     company: "PT. Telkom Prima Cipta Certifia",
                     industry: "Information Technology (EduTech)",
                     role: "Industry Instructor & Consultant",
-                    period: "Jul 2024 - Oct 2024",
+                    period: "Oct 2024 - Oct 2024",
                     details: [
-                        "<strong>Curriculum Architecture:</strong> Architected and delivered a comprehensive DevSecOps & Multi-Cloud curriculum, leading hands-on training for hundreds of professionals.",
-                        "<strong>Security Integration:</strong> Focused on integrating automated security testing (SAST/DAST) into CI/CD pipelines, Kubernetes hardening, and secure Infrastructure as Code (IaC)."
-                        ],
+                        "<strong>Curriculum Leadership:</strong> Architected and delivered a comprehensive DevSecOps & Multi-Cloud curriculum for hundreds of professionals.", 
+                        "<strong>Hands-On Security Training:</strong> Led practical training on integrating automated security testing (SAST/DAST) into CI/CD pipelines, Kubernetes hardening, and secure IaC."
+                    ],
                     keyCompetencies: ["Talent Acquisition", "Mentorship", "Stakeholder Management"],
                     techSkills: ["AWS", "GCP", "Alibaba Cloud", "Kubernetes Security", "Secure SDLC"]
                 },
                 {
-                    id: 13, // New unique ID
+                    id: 13,
                     company: "Sekolah DevOps Cilsy",
                     industry: "Information Technology (EduTech)",
                     role: "Industry Instructor & Consultant",
-                    period: "Jan 2023 - Jun 2024",
+                    period: "Jul 2020 - Jun 2024",
                     details: [
-                        "<strong>Expert Instruction:</strong> Developed and delivered a specialized curriculum focused on AWS Cloud Security and DevOps best practices.",
-                        "<strong>Mentorship & Skill Development:</strong> Mentored numerous engineers on secure infrastructure design, IAM policies, and VPC security hardening, fostering a security-first engineering culture."
-                        ],
+                        "<strong>Expert Curriculum Development:</strong> Functioned as an industry expert, developing and delivering a specialized curriculum focused on AWS Cloud Security and DevOps best practices.",
+                        "<strong>Professional Mentorship:</strong> Mentored numerous engineers on secure infrastructure design, IAM policies, and VPC security hardening, fostering a more security-conscious generation of cloud professionals."
+                    ],
                     keyCompetencies: ["Mentorship", "Talent Acquisition", "High-Performance Team Building"],
-                    techSkills: ["AWS", "IAM", "VPC Security", "DevOps Methodologies"]
+                    techSkills: ["GCP", "AWS", "IAM", "VPC Security", "DevOps Methodologies"]
                 },
                 {
                     id: 2,
                     company: "PT. Meteor Inovasi Digital",
                     industry: "Information Technology (Software)",
                     role: "Head of IT DevOps",
-                    period: "Sep 2022 - Dec 2022",
+                    period: "Oct 2022 - Dec 2022",
                     details: ["<strong>Digital Transformation:</strong> Spearheaded a multi-billion IDR initiative to migrate legacy infrastructure to a multi-cloud environment (AWS, GCP, Alibaba), enhancing scalability and operational resilience.","<strong>Technology Governance:</strong> Established the company's DevSecOps strategy, integrating security (SAST/DAST) into the SDLC to mitigate risk and ensure compliance."],
                     keyCompetencies: ["Digital Transformation", "Technology Roadmapping", "Budget Management (CAPEX/OPEX)"],
                     techSkills: ["AWS", "GCP", "Terraform", "GitLab-CI", "Kubernetes (GKE, EKS, ACK)", "SonarQube"]
@@ -321,16 +321,6 @@
                     details: ["<strong>Scalability & Performance:</strong> Architected and scaled a containerized infrastructure on GKE and Amazon EKS to support over a hundred business-critical APIs with 99.9% uptime.","<strong>Process Innovation:</strong> Pioneered the development of a robust CI/CD pipeline that accelerated application deployment cycles and improved developer productivity."],
                     keyCompetencies: [],
                     techSkills: ["AWS", "GCP", "Azure DevOps", "Nexus Artifactory", "Kubernetes (GKE, EKS, ACK)", "Docker", "Rancher", "OWASP ZAP", "SonarQube", "Prometheus", "Grafana", "Dynatrace"]
-                },
-                 {
-                    id: 5,
-                    company: "Sekolah DevOps Cilsy",
-                    industry: "Information Technology (EduTech)",
-                    role: "Industry Instructor & Consultant",
-                    period: "Jul 2020 - Nov 2021",
-                    details: ["<strong>Thought Leadership:</strong> Mentored and trained technology professionals on AWS cloud infrastructure and modern DevOps practices, contributing to industry-wide skill development."],
-                    keyCompetencies: ["Talent Acquisition", "High-Performance Team Building", "Mentorship"],
-                    techSkills: ["AWS"]
                 },
                 {
                     id: 6,
@@ -438,7 +428,7 @@
                 { category: "IaC & Automation", skills: ["Terraform", "Ansible", "GitOps (Flux CD)", "Bash", "Python", "Go"] },
                 { category: "CI/CD & DevOps Tools", skills: ["Jenkins", "GitLab-CI", "Azure DevOps", "Nexus Artifactory", "Docker"] },
                 { category: "Container & Orchestration", skills: ["Kubernetes (GKE, EKS, ACK)", "Docker", "Rancher", "OpenShift (OKD)"] },
-                { category: "Security (DevSecOps)", skills: ["OWASP ZAP", "SonarQube", "IAM", "Network Security", "Container Security", "Secure SDLC"] },
+                { category: "Security (DevSecOps)", skills: ["OWASP ZAP", "SonarQube", "IAM", "Network Security", "Container Security", "Secure SDLC", "Kubernetes Security", "VPC Security"] },
                 { category: "Monitoring & Observability", skills: ["ELK Stack", "Prometheus", "Grafana", "Dynatrace"] },
                 { category: "Network Infrastructure", skills: ["MPLS", "VPN", "Firewall", "Load Balancing", "FTTH"] },
                 { category: "Databases", skills: ["PostgreSQL", "MySQL", "BigQuery", "Cloud SQL"] },
@@ -625,7 +615,7 @@
                 labels: ['Information Technology', 'Telecommunications', 'Consulting', 'Logistics & E-commerce', 'Financial Services', 'Hospitality & Entertainment'],
                 datasets: [{
                     label: 'Years of Experience',
-                    data: [4.58, 2.67, 0.83, 0.75, 0.58, 0.25],
+                    data: [5.41, 2.67, 0.83, 0.75, 0.58, 0.25],
                     backgroundColor: [
                         'rgba(3, 105, 161, 0.6)',
                         'rgba(14, 165, 233, 0.6)',
@@ -705,7 +695,7 @@
                 labels: ['DevOps & Engineering', 'IT Leadership & Strategy', 'IT Consulting & Training', 'Foundation IT'],
                  datasets: [{
                     label: 'Years of Experience',
-                    data: [2.16, 1.91, 4.18, 1.25],
+                    data: [2.16, 1.91, 5.01, 1.25],
                     backgroundColor: [
                         'rgba(3, 105, 161, 0.7)',
                         'rgba(14, 165, 233, 0.7)',
@@ -739,3 +729,4 @@
     </script>
 </body>
 </html>
+
